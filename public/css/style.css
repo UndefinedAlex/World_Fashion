@@ -2,6 +2,9 @@
 .cw{
     color: white;
 }
+.cr{
+    color: red;
+}
 
 /* Backround Color */
 .primary_color{
@@ -78,13 +81,15 @@
     align-items: left;
     color: white;
     text-align: left;
+    box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+    overflow-wrap: break-word; /* Allows breaking long words to fit within the container */
 }
 .overlay_header {
     font-size: calc(4vw + 3rem); /* Responsive font size */
 }
 .overlay_desc {
     font-size: calc(1vw + 1rem); /* Responsive font size */
-    width: 64%;
+    min-width: 64%;
 }
 
 /* News */
@@ -183,4 +188,27 @@ footer {
 .login-form img.user-icon {
     width: 50%; /* Adjust the size of the user icon */
     margin-bottom: 1.5rem; /* Add space below the user icon */
+}
+
+ /* Responsive styles */
+ @media (max-width: 1330px) {
+    .overlay_header { font-size: 2.5rem; }
+    .overlay_desc { font-size: 1.5rem; }
+    .news_desc{font-size: 5rem;}
+}
+@media (max-width: 768px) {
+    .overlay_header { font-size: 1.5rem; }
+    .overlay_desc { font-size: 1.2rem; }
+    .row {
+        flex-direction: column;
+        border: 1px solid #ddd; /* Add border */
+    }
+
+    .news_desc {
+        font-size: 0.6rem; /* Smaller text size */
+    }
+}
+@media (max-width: 576px) {
+    .overlay_header { font-size: 1rem; }
+    .overlay_desc { font-size: 0.8rem;}
 }

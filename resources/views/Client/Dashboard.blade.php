@@ -21,13 +21,14 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand ms-3 img-fluid" href="#"><img style="max-width: 30%;" src="Img/world_fashion_logo.jpg" alt="Logo"></a>
+            <a class="d-flex justify-content-end" href="#"><img style="max-width: 30%;" src="Img/world_fashion_logo.jpg" alt="Logo"></a>
+            <!-- navbar-brand ms-3 img-fluid -->
         </div>
     </nav>
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
         <div class="offcanvas-header gap-3">
         <svg style="max-width: 8%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"/></svg>
-            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Hello, Majid!</h5>   <!-- Buat Ini Jadi Username Akun -->
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Hello, AlexChan!</h5>   <!-- Buat Ini Jadi Username Akun -->
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body background_sidebar_color">
@@ -37,6 +38,9 @@
                 </li>
                 <li class="nav-item">
                     <b><h6><a class="nav-link" href="#">Former events</a></h6></b>
+                </li>
+                <li class="nav-item">
+                    <b><h6><a class="nav-link" href="#">Check Payment</a></h6></b>
                 </li>
             </ul>
             <form class="d-flex mt-3" role="search">
@@ -91,6 +95,11 @@
                     </div>
                 </div>
             </div>
+            <ul class="navbar-nav">
+                <li class="nav-item secondary_color text-center rounded mt-2">
+                    <b><h6><a class="nav-link cr" href="#">Logout</a></h6></b>
+                </li>
+            </ul>
         </div>
     </div>
      <!-- Header Video -->
@@ -156,29 +165,195 @@
                 <b><p>Don't miss this opportunity to indulge your passion for fashion and be a part of an unforgettable event!</p></b>
             </div>
         </div>
+    </div>
+    <!-- Popup -->
+    <div class="container">
+        <!-- Trigger button for the modal -->
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <div class="btn btn-primary rounded">
-                    <h1>PRE-ORDER NOW</h1>      <!-- Perlu Warna Yang Lebih Mencolok -->
+                <button type="button" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <h1>PRE ORDER NOW</h1>
+                </button>
+            </div>
+        </div>
+
+        <!-- Modal 1 -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Pre Order form</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Horizontal form with input fields -->
+                        <form id="preOrderForm">
+                            <div class="mb-3 row">
+                                <label for="inputNama" class="col-sm-2 col-form-label">Nama</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputNama" placeholder="Nama">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="inputNoTelepon" class="col-sm-2 col-form-label">No Telepon</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputNoTelepon" placeholder="No Telepon">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="inputJumlahTiket" class="col-sm-2 col-form-label">Jumlah Tiket</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" id="inputJumlahTiket" placeholder="Jumlah Tiket">
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary w-100" id="submitBtn">Bayar Sekarang</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 2 -->
+        <div class="modal fade" id="nextInputModal" tabindex="-1" aria-labelledby="nextInputModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="nextInputModalLabel">Pay Now</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row border ms-1 me-1">
+                            <div class="col text-start">
+                                <p class="no_padding_margin">Tanggal Pembelian:</p>
+                                <p class="no_padding_margin">22/05/2024</p>
+                            </div>
+                            <div class="col text-center">
+                                <p class="no_padding_margin">Kode Pesanan:</p>
+                                <p class="no_padding_margin">KWDF-123456789109</p>
+                            </div>
+                            <div class="col text-end">
+                                <p class="no_padding_margin">Status Pesanan:</p>
+                                <p class="no_padding_margin">Belum Dibayar</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="row text-center d-flex justify-content-center pt-3 pb-3">
+                                    <div class="col-3 no_padding_margin cr">
+                                        <h3>20</h3>
+                                        <h4>Hrs</h4>
+                                    </div>
+                                    <div class="col-3 no_padding_margin cr">
+                                        <h3>22</h3>
+                                        <h4>Min</h4>
+                                    </div>
+                                    <div class="col-3 no_padding_margin cr">
+                                        <h3>10</h3>
+                                        <h4>Sec</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <img src="/Img/logo_tm.png" alt="">    <!-- QR Code Here -->
+                                </div>
+                            </div>
+                            <div class="col-8 border pe-0">
+                                <div class="row no_padding_margin">
+                                    <div class="col-5 no_padding_margin fs-5 d-flex flex-column gap-1">
+                                        <label for="name">Nama: </label>
+                                        <label for="no.telp">No Telp: </label>
+                                        <label for="email">Email: </label>
+                                        <label for="jumlah_tiket">Jumlah Tiket: </label>
+                                        <label for="total_bayar">Total Bayar: </label>
+                                    </div>
+                                    <div class="col-7 no_padding_margin fs-5 d-flex flex-column gap-1">
+                                        <label for="name">Shabrina Zatalini</label>
+                                        <label for="no.telp">085893459719</label>
+                                        <label for="email">bina@gmail.com</label>
+                                        <label for="jumlah_tiket">2</label>
+                                        <label for="total_bayar">Rp. 200.000,00</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-primary" id="closeConfirmationBtn">Home</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 3 -->
+        <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="confirmationModalLabel">Pre Order Success</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Your pre-order has been submitted successfully!</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            // Hide the first modal
+            var firstModal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
+            firstModal.hide();
+
+            // Show the second modal
+            var secondModal = new bootstrap.Modal(document.getElementById('nextInputModal'));
+            secondModal.show();
+        });
+
+        document.getElementById('closeConfirmationBtn').addEventListener('click', function() {
+            // Hide the second modal
+            var secondModal = bootstrap.Modal.getInstance(document.getElementById('nextInputModal'));
+            secondModal.hide();
+
+            // Show the third modal
+            var thirdModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+            thirdModal.show();
+        });
+
+        document.getElementById('reConfirmBtn').addEventListener('click', function() {
+            // Hide the second modal
+            var secondModal = bootstrap.Modal.getInstance(document.getElementById('nextInputModal'));
+            secondModal.hide();
+
+            // Show the first modal again
+            var firstModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+            firstModal.show();
+        });
+    </script>
+
     <!-- News -->
     <div class="container mt-5 mb-5">
-        <div class="row">
-            <div class="col-4">
+        <div class="row align-items-center border-0 border-md">
+            <div class="col-md-4 mb-3 mb-md-0">
                 <div class="square-container">
                     <img src="Img/bg.jpg" alt="Responsive Image" class="img-fluid">
                 </div>
             </div>
             <div class="col">
-                <p class="fs-5 overlay_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum </p>
+                <p class="fs-5 news_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum </p>
             </div>
         </div>
     </div>
+
     <!-- Footer -->
-    <footer class="main_color">
+    <footer class="main_color container-fluid">
         <div class="container">
             <div class="row mb-3">
                 <div class="col-12">
