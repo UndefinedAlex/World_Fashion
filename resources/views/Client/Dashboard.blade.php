@@ -40,7 +40,7 @@
                     <b><h6><a class="nav-link" href="#">Former events</a></h6></b>
                 </li>
                 <li class="nav-item">
-                    <b><h6><a class="nav-link" href="#">Check Payment</a></h6></b>
+                    <b><h6><a class="nav-link" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#transactionHistoryModal" href="#">Transaction History</a></h6></b>
                 </li>
             </ul>
             <form class="d-flex mt-3" role="search">
@@ -79,31 +79,129 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-5 mb-3">
-                            <div class="sponsor-item bg-light rounded"><img class="img-fluid p-1 rounded" src="Img/bg.jpg" alt="Sponsor"></div>
+                            <div class="sponsor-item bg-light rounded"><img class="img-fluid p-1 rounded" src="Img/sponsor1.jpeg" alt="Sponsor"></div>
                         </div>
                         <div class="col-5 mb-3">
-                            <div class="sponsor-item bg-light rounded"><img class="img-fluid p-1 rounded" src="Img/bg.jpg" alt="Sponsor"></div>
+                            <div class="sponsor-item bg-light rounded"><img class="img-fluid p-1 rounded" src="Img/sponsor2.jpeg" alt="Sponsor"></div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-5 mb-3">
-                            <div class="sponsor-item bg-light rounded"><img class="img-fluid p-1 rounded" src="Img/bg.jpg" alt="Sponsor"></div>
+                            <div class="sponsor-item bg-light rounded"><img class="img-fluid p-1 rounded" src="Img/sponsor3.png" alt="Sponsor"></div>
                         </div>
                         <div class="col-5 mb-3">
-                            <div class="sponsor-item bg-light rounded"><img class="img-fluid p-1 rounded" src="Img/bg.jpg" alt="Sponsor"></div>
+                            <div class="sponsor-item bg-light rounded"><img class="img-fluid p-1 rounded" src="Img/sponsor4.png" alt="Sponsor"></div>
                         </div>
                     </div>
                 </div>
             </div>
             <ul class="navbar-nav">
-                <li class="nav-item secondary_color text-center rounded mt-2">
-                    <b><h6><a class="nav-link cr" href="#">Logout</a></h6></b>
+                <li class="nav-item text-center mt-2">
+                    <b><h6><a class="nav-link cr logout_color rounded" href="#">Logout</a></h6></b>
                 </li>
             </ul>
         </div>
     </div>
-     <!-- Header Video -->
-     <div class="container-fluid gx-0">
+    <!-- Transaction History -->
+    <div class="modal fade" id="transactionHistoryModal" tabindex="-1" aria-labelledby="transactionHistoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="transactionHistoryModalLabel">Transaction History</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!-- Transaction Card Example -->
+            <div class="transaction-card" data-bs-toggle="modal" data-bs-target="#transactionDetailModal1">
+            <div class="d-flex justify-content-between">
+                <span>ID: WDP-1715414831-H509BRF0SGF0K0</span>
+                <span class="status-success">Success</span>
+            </div>
+            <div class="mt-2">11/05/2024</div>
+            <div class="mt-2">2 Tiket World Fashion</div>
+            <div class="mt-2">Rp. 200.000,00</div>
+            </div>
+            <div class="transaction-card" data-bs-toggle="modal" data-bs-target="#transactionDetailModal2">
+            <div class="d-flex justify-content-between">
+                <span>ID: FF-1714646394-LVR2MDIWZ79H8CR</span>
+                <span class="status-pending">Pending</span>
+            </div>
+            <div class="mt-2">02/05/2024</div>
+            <div class="mt-2">5 Tiket World Fashion</div>
+            <div class="mt-2">Rp. 500.000,00</div>
+            </div>
+            <div class="transaction-card" data-bs-toggle="modal" data-bs-target="#transactionDetailModal3">
+            <div class="d-flex justify-content-between">
+                <span>ID: FF-1714646294-VNWP79AZYGRESID</span>
+                <span class="status-expired">Expired</span>
+            </div>
+            <div class="mt-2">02/05/2024</div>
+            <div class="mt-2">1 Tiket World Fashion</div>
+            <div class="mt-2">Rp. 100.000,00</div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Transaction Detail Modal 1 -->
+    <div class="modal fade" id="transactionDetailModal1" tabindex="-1" aria-labelledby="transactionDetailModal1Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="transactionDetailModal1Label">Transaction Detail</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Transaction ID: WDP-1715414831-H509BRF0SGF0K0</p>
+            <p>Status: Success</p>
+            <p>Date: 11/05/2024</p>
+            <p>Item: 2 Tiket World Fashion</p>
+            <p>Amount: Rp. 200.000,00</p>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Transaction Detail Modal 2 -->
+    <div class="modal fade" id="transactionDetailModal2" tabindex="-1" aria-labelledby="transactionDetailModal2Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="transactionDetailModal2Label">Transaction Detail</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Transaction ID: FF-1714646394-LVR2MDIWZ79H8CR</p>
+            <p>Status: Pending</p>
+            <p>Date: 02/05/2024</p>
+            <p>Item: 5 Tiket World Fashion</p>
+            <p>Amount: Rp. 500.000,00</p>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Transaction Detail Modal 3 -->
+    <div class="modal fade" id="transactionDetailModal3" tabindex="-1" aria-labelledby="transactionDetailModal3Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="transactionDetailModal3Label">Transaction Detail</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Transaction ID: FF-1714646294-VNWP79AZYGRESID</p>
+            <p>Status: Expired</p>
+            <p>Date: 02/05/2024</p>
+            <p>Item: 1 Tiket World Fashion</p>
+            <p>Amount: Rp. 100.000,00</p>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- Header Video -->
+    <div class="container-fluid gx-0">
         <div class="image-container">
             <div class="ratio ratio-16x9">
                 <video class="video-bg" src="{{ asset('video/fashionshow.mp4') }}" autoplay loop muted playsinline></video>
@@ -176,7 +274,6 @@
                 </button>
             </div>
         </div>
-
         <!-- Modal 1 -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
@@ -212,60 +309,82 @@
                                     <input type="number" class="form-control" id="inputJumlahTiket" placeholder="Jumlah Tiket">
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-primary w-100" id="submitBtn">Bayar Sekarang</button>
+                            <button type="button" class="btn btn-primary w-100" id="submitBtn" data-bs-toggle="modal" data-bs-target="#captchaModal">Bayar Sekarang</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Modal 2 -->
+        <!-- Modal 2 (CAPTCHA) -->
+        <div class="modal fade" id="captchaModal" tabindex="-1" aria-labelledby="captchaModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="captchaModalLabel">CAPTCHA Verification</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="captchaForm">
+                            <div class="mb-3">
+                                <label for="captchaInput" class="form-label">Enter the text shown in the image below:</label>
+                                <img src="path/to/captcha.jpg" alt="CAPTCHA Image" class="img-fluid mb-3">
+                                <input type="text" class="form-control" id="captchaInput" placeholder="CAPTCHA">
+                            </div>
+                            <button type="button" class="btn btn-primary w-100" id="submitCaptchaBtn" data-bs-toggle="modal" data-bs-target="#nextInputModal">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 3 -->
         <div class="modal fade" id="nextInputModal" tabindex="-1" aria-labelledby="nextInputModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header border-0">
                         <h5 class="modal-title" id="nextInputModalLabel">Pay Now</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="row border ms-1 me-1">
-                            <div class="col text-start">
-                                <p class="no_padding_margin">Tanggal Pembelian:</p>
+                        <div class="row border ms-1 me-1 d-flex no_padding_margin">
+                            <div class="col-12 col-md-4 text-start">
+                                <b><p class="no_padding_margin">Tanggal:</p></b>
                                 <p class="no_padding_margin">22/05/2024</p>
                             </div>
-                            <div class="col text-center">
-                                <p class="no_padding_margin">Kode Pesanan:</p>
+                            <div class="col-12 col-md-4 text-start">
+                                <b><p class="no_padding_margin">Kode:</p></b>
                                 <p class="no_padding_margin">KWDF-123456789109</p>
                             </div>
-                            <div class="col text-end">
-                                <p class="no_padding_margin">Status Pesanan:</p>
+                            <div class="col-12 col-md-4 text-start">
+                                <b><p class="no_padding_margin">Status:</p></b>
                                 <p class="no_padding_margin">Belum Dibayar</p>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-4">
-                                <div class="row text-center d-flex justify-content-center pt-3 pb-3">
-                                    <div class="col-3 no_padding_margin cr">
-                                        <h3>20</h3>
-                                        <h4>Hrs</h4>
+                            <div class="col-md-4 text-center d-flex flex-column justify-content-center align-items-center pt-3 pb-3">
+                                <div class="d-flex justify-content-center gap-2">
+                                    <div class="cr">
+                                        <h3 class="countdown_text no_padding_margin">20</h3>
+                                        <h4 class="countdown_text no_padding_margin">Hrs</h4>
                                     </div>
-                                    <div class="col-3 no_padding_margin cr">
-                                        <h3>22</h3>
-                                        <h4>Min</h4>
+                                    <div class="cr">
+                                        <h3 class="countdown_text no_padding_margin">22</h3>
+                                        <h4 class="countdown_text no_padding_margin">Min</h4>
                                     </div>
-                                    <div class="col-3 no_padding_margin cr">
-                                        <h3>10</h3>
-                                        <h4>Sec</h4>
+                                    <div class="cr">
+                                        <h3 class="countdown_text no_padding_margin">10</h3>
+                                        <h4 class="countdown_text no_padding_margin">Sec</h4>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <img src="/Img/logo_tm.png" alt="">    <!-- QR Code Here -->
+                                <div class="row mt-3">
+                                    <img src="/Img/logo_tm.png" alt="QR Code" class="img-fluid"> <!-- QR Code Here -->
                                 </div>
                             </div>
-                            <div class="col-8 border pe-0">
+                            <div class="col-12 col-md-8 border pe-0">
                                 <div class="row no_padding_margin">
                                     <div class="col-5 no_padding_margin fs-5 d-flex flex-column gap-1">
-                                        <label for="name">Nama: </label>
+                                        <label class="pembelian_text" for="name">Nama: </label>
                                         <label for="no.telp">No Telp: </label>
                                         <label for="email">Email: </label>
                                         <label for="jumlah_tiket">Jumlah Tiket: </label>
@@ -283,13 +402,13 @@
                         </div>
                     </div>
                     <div class="modal-footer border-0">
-                        <button type="button" class="btn btn-primary" id="closeConfirmationBtn">Home</button>
+                        <button type="button" class="btn btn-primary" id="closeConfirmationBtn" data-bs-toggle="modal" data-bs-target="#confirmationModal">Home</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Modal 3 -->
+        <!-- Modal 4 -->
         <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -307,43 +426,25 @@
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.getElementById('submitBtn').addEventListener('click', function() {
-            // Hide the first modal
-            var firstModal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
-            firstModal.hide();
+    document.addEventListener('hidden.bs.modal', function (event) {
+        if (document.querySelectorAll('.modal.show').length === 0) {
+            const backdrop = document.querySelector('.modal-backdrop');
+            if (backdrop) {
+                backdrop.parentNode.removeChild(backdrop);
+            }
+            document.body.classList.remove('modal-open');
+            document.body.style.paddingRight = '';
+        }
+    });
 
-            // Show the second modal
-            var secondModal = new bootstrap.Modal(document.getElementById('nextInputModal'));
-            secondModal.show();
-        });
-
-        document.getElementById('closeConfirmationBtn').addEventListener('click', function() {
-            // Hide the second modal
-            var secondModal = bootstrap.Modal.getInstance(document.getElementById('nextInputModal'));
-            secondModal.hide();
-
-            // Show the third modal
-            var thirdModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
-            thirdModal.show();
-        });
-
-        document.getElementById('reConfirmBtn').addEventListener('click', function() {
-            // Hide the second modal
-            var secondModal = bootstrap.Modal.getInstance(document.getElementById('nextInputModal'));
-            secondModal.hide();
-
-            // Show the first modal again
-            var firstModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-            firstModal.show();
-        });
     </script>
 
     <!-- News -->
-    <div class="container mt-5 mb-5">
+    <div class="container mt-5 mb-5 border border-2 rounded">
         <div class="row align-items-center border-0 border-md">
-            <div class="col-md-4 mb-3 mb-md-0">
+            <div class="col-md-4 p-0">
                 <div class="square-container">
-                    <img src="Img/bg.jpg" alt="Responsive Image" class="img-fluid">
+                    <img src="Img/news.jpeg" alt="Responsive Image" class="img-fluid rounded">
                 </div>
             </div>
             <div class="col">
@@ -371,18 +472,18 @@
                         <div class="col-lg-6 mb-3">
                             <h3 class="cw pb-2 border-bottom">Help & FAQ</h3>
                             <ul class="list-unstyled">
-                                <li><a href="#" class="cw">Privacy Policy</a></li>
-                                <li><a href="#" class="cw">Return And Refund Policy</a></li>
-                                <li><a href="#" class="cw">Customer Service</a></li>
-                                <li><a href="#" class="cw">Feedback</a></li>
+                                <li><a href="#" class="cw text-decoration-none">Privacy Policy</a></li>
+                                <li><a href="#" class="cw text-decoration-none">Return And Refund Policy</a></li>
+                                <li><a href="#" class="cw text-decoration-none">Customer Service</a></li>
+                                <li><a href="#" class="cw text-decoration-none">Feedback</a></li>
                             </ul>
                         </div>
                         <div class="col-lg-6 mb-3">
                             <h3 class="cw pb-2 border-bottom">The Company</h3>
                             <ul class="list-unstyled">
-                                <li><a href="#" class="cw">About</a></li>
-                                <li><a href="#" class="cw">Careers</a></li>
-                                <li><a href="#" class="cw">Store Locator</a></li>
+                                <li><a href="#" class="cw text-decoration-none">About</a></li>
+                                <li><a href="#" class="cw text-decoration-none">Careers</a></li>
+                                <li><a href="#" class="cw text-decoration-none">Store Locator</a></li>
                             </ul>
                         </div>
                     </div>
@@ -390,11 +491,17 @@
                         <div class="col-lg-6 mb-3">
                             <h3 class="cw pb-2 border-bottom mt-3">More</h3>
                             <ul class="list-unstyled">
-                                <li><a href="#" class="cw">Franchise</a></li>
+                                <li><a href="#" class="cw text-decoration-none">Franchise</a></li>
                             </ul>
                         </div>
                         <div class="col-lg-6 mb-3">
                             <h3 class="cw pb-2 mt-3">Follow Us</h3>
+                            <div class="d-flex gap-2">
+                                <i style="font-size: 1.5rem;" class="fa-brands fa-twitter"></i>
+                                <i style="font-size: 1.5rem;" class="fa-brands fa-instagram"></i>
+                                <i style="font-size: 1.5rem;" class="fa-brands fa-youtube"></i>
+                                <i style="font-size: 1.5rem;" class="fa-brands fa-facebook-f"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
